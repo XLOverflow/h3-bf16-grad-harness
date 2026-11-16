@@ -1,0 +1,40 @@
+{
+ "diag_mean": {
+  "bb": 4.1246626804875633e-07,
+  "br": 4.67821488452951e-08,
+  "rr": 3.425705664007857e-07
+ },
+ "all_pairs": {
+  "mean_bb": 5.090192418839441e-09,
+  "mean_br": 5.2598869181625825e-09,
+  "mean_rr": 3.4112804752727615e-09,
+  "cos_expected_grad_bf16_vs_fp32": 1.262265153853385,
+  "bf16_projection_on_fp32_expected": 1.5419098359955314,
+  "expected_power_fraction_fp32": 0.009957891336413827,
+  "expected_power_fraction_bf16": 0.012340869576849241
+ },
+ "same_prompt": {
+  "mean_bb": 2.908694018008038e-09,
+  "mean_br": 4.6092703395818896e-09,
+  "mean_rr": 1.609988717858738e-09,
+  "cos_expected_grad_bf16_vs_fp32": 2.1299614614166034,
+  "bf16_projection_on_fp32_expected": 2.862920894074434,
+  "expected_power_fraction_fp32": 0.004699728685899868,
+  "expected_power_fraction_bf16": 0.00705195610726696
+ },
+ "cross_prompt": {
+  "mean_bb": 7.135347169618881e-09,
+  "mean_br": 5.869839960581982e-09,
+  "mean_rr": 5.09999149784841e-09,
+  "cos_expected_grad_bf16_vs_fp32": 0.9730473633693004,
+  "bf16_projection_on_fp32_expected": 1.1509509306159347,
+  "expected_power_fraction_fp32": 0.014887418821270667,
+  "expected_power_fraction_bf16": 0.01729922595458263
+ },
+ "jackknife_all_pairs_cos": {
+  "mean": 1.2917144833053396,
+  "se": 0.50960514929334,
+  "min": 1.2193526487513575,
+  "max": 1.74351885437884
+ }
+}

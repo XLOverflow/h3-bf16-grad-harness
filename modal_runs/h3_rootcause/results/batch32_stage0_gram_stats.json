@@ -1,0 +1,26 @@
+{
+ "run_id": "run20261115-201438-d14be6c3",
+ "kappa_fp32": 4.783746894154785,
+ "kappa_bf16": 4.377200842130884,
+ "kappa_fp32_over_draws_median": 4.174355506896973,
+ "kappa_uniform_weights_fp32": 4.233496860902521,
+ "fp32_pair_cos_same_prompt_mean": 0.0055066205790471195,
+ "fp32_pair_cos_cross_prompt_mean": 0.013870042007134282,
+ "same_prompt_diff_cos": {
+  "p10": -0.07903404899806539,
+  "median": 0.12230492153065038,
+  "p90": 0.3322224563276764,
+  "n": 240
+ },
+ "same_prompt_diff_rel_err": {
+  "p10": 1.0571248025231799,
+  "median": 1.398108897619539,
+  "p90": 1.8097890782912645
+ },
+ "per_sample_rel_err": {
+  "p10": 1.0771371223660846,
+  "median": 1.3651510882534479,
+  "p90": 1.8017639111814108
+ },
+ "per_sample_norm_ratio_median": 1.0373533872010328
+}
