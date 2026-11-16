@@ -20,6 +20,28 @@ Copy `modal_runs/` from this repository into the root of a UniRL checkout; the r
 | `modal_runs/h3_rootcause/cpu_modal.py` | CPU runner for the `rc.py` self-test. |
 | `modal_runs/h3_rootcause/inspect_src.py` | Prints the diffusers / peft / torch source that `rc.py` mirrors. |
 | `modal_runs/h3_rootcause/results/` | The JSON reports the tables were read from. |
+| `modal_runs/h3_rootcause/make_figures.py`, `figures_modal.py` | Draw the figures below from `results/` (matplotlib only; `figures_modal.py` is a CPU runner). |
+| `modal_runs/h3_rootcause/figures/` | The rendered figures. |
+
+## Figures
+
+Redraw with `python modal_runs/h3_rootcause/make_figures.py --results modal_runs/h3_rootcause/results --out modal_runs/h3_rootcause/figures`.
+
+Per-block cosine against the fp32 gradient for four layouts (stages 2 and 4, H200, 12 (sample, step) pairs):
+
+![Per-block cosine by layout](modal_runs/h3_rootcause/figures/fig1_per_block_cosine_by_layout.png)
+
+bf16 forward drift of the residual stream, and the per-block gradient error of the whole bf16 model against one block alone in bf16 (stage 1, B200):
+
+![Forward drift and gradient error](modal_runs/h3_rootcause/figures/fig2_forward_drift_and_gradient_error.png)
+
+Batch cosine by LoRA block range, 32 samples x 9 steps, whiskers = 10–90 % over 500 advantage draws:
+
+![Cosine by block range](modal_runs/h3_rootcause/figures/fig3_cosine_by_block_range.png)
+
+Pure fp32 with a value-only relative perturbation on the stream, against bf16 (stage 1):
+
+![Noise baseline](modal_runs/h3_rootcause/figures/fig4_noise_baseline.png)
 
 ## Design in short
 
